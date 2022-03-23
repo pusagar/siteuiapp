@@ -4,8 +4,12 @@ import numpy as np
 import joblib
 from sklearn.ensemble import RandomForestClassifier
 from prediction import get_prediction, ordinal_encoder,labelencoder
+from load_model import get_model
 
-model = joblib.load(r'model/randomforestmodel.pkl')
+model = get_model(model_path = r'model/randomforestmodel.pkl')
+
+
+#model = joblib.load(r'model/randomforestmodel.pkl')
 
 st.set_page_config(page_title="Site Energy Utilization Index App",
                    page_icon="🚧", layout="wide")
