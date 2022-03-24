@@ -3,7 +3,7 @@ import requests
 import os
 
 def get_model(model_path):
-    
+    print(model_path)
     try:
         with open(model_path, "rb") as mh:
             rf = joblib.load(mh)
