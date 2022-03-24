@@ -74,7 +74,6 @@ def main():
         heating_degree_days = st.slider("Heating degree in Fahrenheit: ", 33.1, 660.10, value=0., step = 10., format="%f")
         
 
-
         
         submit = st.form_submit_button("Predict")
 
@@ -90,6 +89,7 @@ def main():
         data = np.array([mintempjandec,state_factor,maxtempjandec,building_class,
                          max_wind_speed, facility_type,floor_area,
                          elevation,cooling_degree_days,heating_degree_days]).reshape(1,-1)
+        
 
         pred = get_prediction(data=data, model=model)
 
