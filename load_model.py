@@ -12,12 +12,11 @@ def get_model(model_path):
         if not 'randomforestmodel.pkl' in os.listdir('.'):
             # example url: "https://drive.google.com/u/1/uc?id=18IxYOI-whucBTZmt5qTvvYgjlxleaSqO&export=download&confirm=t"
             #url = "https://drive.google.com/u/0/uc?id=1eZQFdqwAMHLsjwD2C-PyvcZlVAwmAudD&export=download&confirm=t"
-            url = "https://drive.google.com/drive/folders/1j7jDx5qQc4IuWYUv8yDIFlA-dfMgmuSa?usp=sharing"
+            url = "https://drive.google.com/u/0/uc?id=1jodlo5KYy7f-ug8O4r4uMnuhLpVwyHax&export=download&confirm=t"
             r = requests.get(url, allow_redirects=True)
             open(r"randomforestmodel.pkl", 'wb').write(r.content)
             del r
         with open(r"/model/randomforestmodel.pkl", "rb") as m:
             rf = joblib.load(m)
     return rf
-
 
