@@ -89,10 +89,10 @@ def main():
         data = np.array([mintempjandec,state_factor,maxtempjandec,building_class,
                          max_wind_speed, facility_type,floor_area,
                          elevation,cooling_degree_days,heating_degree_days]).reshape(1,-1)
-        
-
+        print(data)
         pred = get_prediction(data=data, model=model)
-
+        
+        
         st.write(f"The RMSE score is:  {pred[0]}")
 
 
