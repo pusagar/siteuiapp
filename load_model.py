@@ -16,7 +16,7 @@ def get_model(model_path):
             r = requests.get(url, allow_redirects=True)
             open(r"randomforestmodel.pkl", 'wb').write(r.content)
             del r
-        with open(r"randomforestmodel.pkl", "rb") as m:
+        with open(r"/model/randomforestmodel.pkl", "rb") as m:
             rf = joblib.load(m)
     return rf
 
