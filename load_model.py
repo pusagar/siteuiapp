@@ -9,7 +9,7 @@ def get_model(model_path):
             rf = joblib.load(mh)
     except:
         print("Cannot fetch model from local downloading from drive")
-        if not '/model/randomforestmodel.pkl' in os.listdir('.'):
+        if not 'randomforestmodel.pkl' in os.listdir('.'):
             # example url: "https://drive.google.com/u/1/uc?id=18IxYOI-whucBTZmt5qTvvYgjlxleaSqO&export=download&confirm=t"
             url = "https://drive.google.com/u/0/uc?id=1eZQFdqwAMHLsjwD2C-PyvcZlVAwmAudD&export=download&confirm=t"
             #url = "https://drive.google.com/drive/folders/1j7jDx5qQc4IuWYUv8yDIFlA-dfMgmuSa?usp=sharing"
